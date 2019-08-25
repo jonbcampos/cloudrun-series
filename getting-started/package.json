@@ -1,0 +1,47 @@
+{
+  "name": "getting-started",
+  "version": "1.0.0",
+  "description": "Simple Pub/Sub subscriber service sample  with cloud run",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "ava -T 20s"
+  },
+  "author": "jonbcampos@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ridealto/fake-vehicle-positions.git"
+  },
+  "engines": {
+    "node": ">=4.3.2"
+  },
+  "license": "Apache-2.0",
+  "cloud-repo-tools": {
+    "requiresKeyFile": true,
+    "requiresProjectId": true
+  },
+  "ava": {
+    "failFast": true,
+    "sources": [
+      "src/**/*.ts"
+    ],
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
+    ],
+    "files": [
+      "test/*.test.js"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "^3.1.0",
+    "ava": "^2.3.0",
+    "sinon": "^7.2.3"
+  }
+}
